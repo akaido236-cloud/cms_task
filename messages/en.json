@@ -1,0 +1,54 @@
+{
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "Home": {
+    "title": "SD Media",
+    "subtitle": "A strong emerging digital agency, working on marketing projects, content writing, website design, and video editing.",
+    "cta": "Discover Our Story"
+  },
+  "About": {
+    "heroTitle": "Crafting Digital Brilliance",
+    "heroSubtitle": "We are SD Media, a strong emerging digital agency specializing in marketing, content writing, website design, and video editing.",
+    "storyTitle": "Our Story",
+    "storyContent": "Founded with a passion for creativity and technology, SD Media was born to bridge the gap between brands and their audiences. We started as a small team of visionaries and have grown into a full-fledged digital agency...",
+    "visionTitle": "Our Vision",
+    "visionContent": "To be the leading digital agency in the region, setting the standard for creativity, innovation, and digital excellence.",
+    "missionTitle": "Our Mission",
+    "missionContent": "To empower brands by providing top-tier marketing strategies, compelling content, stunning web designs, and captivating video edits that drive real results.",
+    "valuesTitle": "Our Core Values",
+    "teamTitle": "Meet The Team",
+    "capabilitiesTitle": "Our Capabilities",
+    "statsTitle": "Numbers Speak",
+    "ctaTitle": "Ready to Elevate Your Brand?",
+    "ctaButton": "Contact Us Today"
+  },
+  "Capabilities": {
+    "items": [
+      { "title": "Marketing", "desc": "Delivering top-notch marketing solutions tailored to your brand." },
+      { "title": "Content Writing", "desc": "Delivering top-notch content writing solutions tailored to your brand." },
+      { "title": "Web Design", "desc": "Delivering top-notch web design solutions tailored to your brand." },
+      { "title": "Video Editing", "desc": "Delivering top-notch video editing solutions tailored to your brand." },
+      { "title": "SEO", "desc": "Delivering top-notch SEO solutions tailored to your brand." },
+      { "title": "Branding", "desc": "Delivering top-notch branding solutions tailored to your brand." }
+    ]
+  },
+  "Stats": {
+    "items": [
+      { "num": "150+", "label": "Projects Completed" },
+      { "num": "80+", "label": "Happy Clients" },
+      { "num": "15+", "label": "Team Members" },
+      { "num": "5+", "label": "Years Experience" }
+    ]
+  },
+  "Footer": {
+    "description": "Crafting digital brilliance. We provide top-tier marketing, web design, and content solutions.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  }
+}

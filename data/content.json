@@ -1,0 +1,29 @@
+{
+  "site": {
+    "name": "SD Media",
+    "email": "info@sdmedia.com",
+    "phone": "+123 456 7890",
+    "location": "Dubai, UAE",
+    "social": {"facebook":"","instagram":"","linkedin":""}
+  },
+  "home": {
+    "ar":{"title":"إس دي ميديا","subtitle":"وكالة رقمية ناشئة قوية، نعمل على مشاريع التسويق، كتابة المحتوى، تصميم المواقع، وتحرير الفيديو.","cta":"اكتشف قصتنا"},
+    "en":{"title":"SD Media","subtitle":"A strong emerging digital agency, working on marketing projects, content writing, website design, and video editing.","cta":"Discover Our Story"}
+  },
+  "about": {
+    "ar":{"heroTitle":"صناعة التميز الرقمي","heroSubtitle":"نحن إس دي ميديا، وكالة رقمية ناشئة قوية متخصصة في التسويق، كتابة المحتوى، تصميم المواقع، وتحرير الفيديو.","storyTitle":"قصتنا","storyContent":"تأسست بشغف الإبداع والتكنولوجيا، وُلدت إس دي ميديا لسد الفجوة بين العلامات التجارية وجمهورها. بدأنا كفريق صغير من أصحاب الرؤى ونما لنصبح وكالة رقمية متكاملة...","visionTitle":"رؤيتنا","visionContent":"أن نكون الوكالة الرقمية الرائدة في المنطقة، ونضع معايير الإبداع والابتكار والتميز الرقمي.","missionTitle":"مهمتنا","missionContent":"تمكين العلامات التجارية من خلال تقديم استراتيجيات تسويق من الطراز الأول، ومحتوى مقنع، وتصاميم ويب مذهلة، وتحرير فيديو جذاب يدفع نتائج حقيقية.","capabilitiesTitle":"قدراتنا","statsTitle":"الأرقام تتحدث","ctaTitle":"هل أنت مستعد للارتقاء بعلامتك التجارية؟","ctaButton":"تواصل معنا اليوم"},
+    "en":{"heroTitle":"Crafting Digital Brilliance","heroSubtitle":"We are SD Media, a strong emerging digital agency specializing in marketing, content writing, website design, and video editing.","storyTitle":"Our Story","storyContent":"Founded with a passion for creativity and technology, SD Media was born to bridge the gap between brands and their audiences. We started as a small team of visionaries and have grown into a full-fledged digital agency...","visionTitle":"Our Vision","visionContent":"To be the leading digital agency in the region, setting the standard for creativity, innovation, and digital excellence.","missionTitle":"Our Mission","missionContent":"To empower brands by providing top-tier marketing strategies, compelling content, stunning web designs, and captivating video edits that drive real results.","capabilitiesTitle":"Our Capabilities","statsTitle":"Numbers Speak","ctaTitle":"Ready to Elevate Your Brand?","ctaButton":"Contact Us Today"}
+  },
+  "capabilities": {
+    "ar":[{"title":"التسويق","desc":"تقديم حلول تسويق من الطراز الأول تناسب علامتك التجارية."},{"title":"كتابة المحتوى","desc":"تقديم حلول كتابة محتوى من الطراز الأول تناسب علامتك التجارية."},{"title":"تصميم المواقع","desc":"تقديم حلول تصميم مواقع من الطراز الأول تناسب علامتك التجارية."},{"title":"تحرير الفيديو","desc":"تقديم حلول تحرير فيديو من الطراز الأول تناسب علامتك التجارية."},{"title":"تحسين محركات البحث","desc":"تقديم حلول SEO من الطراز الأول تناسب علامتك التجارية."},{"title":"الهوية البصرية","desc":"تقديم حلول branding من الطراز الأول تناسب علامتك التجارية."}],
+    "en":[{"title":"Marketing","desc":"Delivering top-notch marketing solutions tailored to your brand."},{"title":"Content Writing","desc":"Delivering top-notch content writing solutions tailored to your brand."},{"title":"Web Design","desc":"Delivering top-notch web design solutions tailored to your brand."},{"title":"Video Editing","desc":"Delivering top-notch video editing solutions tailored to your brand."},{"title":"SEO","desc":"Delivering top-notch SEO solutions tailored to your brand."},{"title":"Branding","desc":"Delivering top-notch branding solutions tailored to your brand."}]
+  },
+  "stats": {
+    "ar":[{"num":"+150","label":"مشروع مكتمل"},{"num":"+80","label":"عميل سعيد"},{"num":"+15","label":"عضو في الفريق"},{"num":"+5","label":"سنوات خبرة"}],
+    "en":[{"num":"150+","label":"Projects Completed"},{"num":"80+","label":"Happy Clients"},{"num":"15+","label":"Team Members"},{"num":"5+","label":"Years Experience"}]
+  },
+  "footer": {
+    "ar":{"description":"صناعة التميز الرقمي. نقدم حلول تسويق وتصميم ويب ومحتوى من الطراز الأول.","quickLinks":"روابط سريعة","contactUs":"تواصل معنا","followUs":"تابعنا","rights":"جميع الحقوق محفوظة."},
+    "en":{"description":"Crafting digital brilliance. We provide top-tier marketing, web design, and content solutions.","quickLinks":"Quick Links","contactUs":"Contact Us","followUs":"Follow Us","rights":"All rights reserved."}
+  }
+}
