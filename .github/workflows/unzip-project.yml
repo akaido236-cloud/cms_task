@@ -1,0 +1,50 @@
+name: Extract Project ZIP
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "sdmedia-cloudflare-workers-cms.zip"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract project
+        run: |
+          rm -rf extracted
+          mkdir extracted
+
+          unzip -o sdmedia-cloudflare-workers-cms.zip -d extracted
+
+          cp -a extracted/front-as-14/. .
+
+          rm -rf extracted
+
+      - name: Remove ZIP
+        run: |
+          rm -f sdmedia-cloudflare-workers-cms.zip
+
+      - name: Commit project files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Extract Cloudflare Workers project"
+          git push
