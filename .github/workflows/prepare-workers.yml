@@ -1,4 +1,4 @@
-name: Prepare Repository for Cloudflare Workers
+name: Prepare Repository
 
 on:
   workflow_dispatch:
@@ -30,11 +30,7 @@ jobs:
 
           echo "Project structure verified."
 
-      - name: Remove old Cloudflare Pages workflow
-        run: |
-          rm -f .github/workflows/deploy.yml
-
-      - name: Fix Cloudflare Worker configuration
+      - name: Fix Cloudflare Worker name
         run: |
           python3 <<'PY'
           from pathlib import Path
@@ -57,54 +53,33 @@ jobs:
         run: |
           npm install --package-lock-only --ignore-scripts
 
-      - name: Create Cloudflare Workers deployment workflow
-        run: |
-          cat > .github/workflows/deploy-workers.yml <<'YAML'
-          name: Deploy SD Media to Cloudflare Workers
-
-          on:
-            push:
-              branches:
-                - main
-            workflow_dispatch:
-
-          permissions:
-            contents: read
-
-          jobs:
-            deploy:
-              runs-on: ubuntu-latest
-
-              steps:
-                - name: Checkout repository
-                  uses: actions/checkout@v4
-
-                - name: Setup Node.js
-                  uses: actions/setup-node@v4
-                  with:
-                    node-version: 20
-                    cache: npm
-
-                - name: Install dependencies
-                  run: npm ci
-
-                - name: Build and deploy to Cloudflare Workers
-                  run: npm run deploy
-                  env:
-                    CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                    CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          YAML
-
       - name: Remove obsolete ZIP archive
         run: |
           rm -f sdmedia-cloudflare-workers-cms.zip
 
-      - name: Show final structure
+      - name: Show final configuration
         run: |
-          echo "===== ROOT FILES ====="
-          ls -la
+          echo "===== WRANGLER CONFIG ====="
+          cat wrangler.jsonc
 
           echo ""
+          echo "===== PACKAGE LOCK ====="
+          test -f package-lock.json && echo "package-lock.json exists"
+
+      - name: Commit repository changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add package-lock.json wrangler.jsonc
+
+          if git diff --cached --quiet; then
+            echo "No repository changes detected."
+            exit 0
+          fi
+
+          git commit -m "Prepare project for Cloudflare Workers deployment"
+          git push          echo ""
           echo "===== WORKFLOWS ====="
           ls -la .github/workflows
 
