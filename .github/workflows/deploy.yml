@@ -1,0 +1,35 @@
+name: Deploy Next.js to Cloudflare Pages
+
+on:
+  push:
+    branches: [ main ] # اغيرها إلى master إذا كان هذا اسم فرعك الرئيسي
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with next-on-pages
+        run: npx @cloudflare/next-on-pages
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'my-nextjs-app' # غير هذا الاسم إلى اسم مشروعك
+          directory: '.vercel/output/static'
+
