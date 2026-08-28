@@ -7,6 +7,6 @@
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
   "observability": { "enabled": true },
   "d1_databases": [
-    { "binding": "SD_MEDIA_DB", "database_name": "sdmedia-content", "database_id": "REPLACE_WITH_D1_DATABASE_ID" }
+    { "binding": "SD_MEDIA_DB", "database_name": "sdmedia-content", "database_id": "99b15b24-8802-40d0-b0c2-1f51c8955bc0" }
   ]
 }
