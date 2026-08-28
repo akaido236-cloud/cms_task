@@ -464,29 +464,7 @@ function EditorCard({
   );
 }
 
-function Field({
-  label,
-  value,
-  onChange,
-}: {
-  label: string;
-  value: string | number;
-  onChange: (value: string) => void;
-}) {
-  return (
-    <label className="block mb-4">
-      <span className="block text-xs text-gray-400 mb-2">
-        {label}
-      </span>
-
-      <input
-        value={value ?? ''}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-black border border-gray-700 rounded-lg px-3 py-2"
-      />
-    </label>
-  );
-}
+function Field({label,value,onChange}:{label:string;value:string|number;onChange:(v:string)=>void}){return <label className="block mb-4"><span className="block text-xs text-gray-400 mb-2">{label}</span><input value={value ?? ''} onChange={e=>onChange(e.target.value)} className="w-full bg-black border border-gray-700 rounded-lg px-3 py-2" /></label>}
 
 function TextArea({
   label,
