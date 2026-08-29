@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { getAdminPassword } from '@/lib/cloudflare';
 import { createSession } from '@/lib/auth';
 
-export const runtime = 'edge';
 
 export async function POST(request: Request) {
   const expected = await getAdminPassword();
