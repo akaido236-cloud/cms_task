@@ -110,7 +110,7 @@ export default function AdminPage() {
     }
   }
 
-  function update(path: string[], value: unknown) {
+  function update(path: Array<string | number>, value: unknown) {
     setContent((previous) => {
       if (!previous) {
         return previous;
