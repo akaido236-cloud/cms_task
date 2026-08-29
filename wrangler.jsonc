@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
+  "keep_vars": true,
   "name": "sdmedia-cms",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-08-27",
