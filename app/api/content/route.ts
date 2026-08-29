@@ -3,7 +3,6 @@ import { getDb, getAdminPassword } from '@/lib/cloudflare';
 import { isValidSession } from '@/lib/auth';
 import { getFallbackContent, readContent, writeContent, type Content } from '@/lib/content';
 
-export const runtime = 'edge';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
